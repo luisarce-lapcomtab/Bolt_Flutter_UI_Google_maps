@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage>
     getUserLocation();
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 670),
+      duration: Duration(milliseconds: 675),
     );
     super.initState();
   }
@@ -259,7 +259,7 @@ class _MyHomePageState extends State<MyHomePage>
     return GestureDetector(
       onTap: () {
         setState(() {
-          _animationController.forward(from: 0.0);
+          _animationController.forward(from: _currentHeight / _maxHeight);
           _currentHeight = _maxHeight;
         });
       },
