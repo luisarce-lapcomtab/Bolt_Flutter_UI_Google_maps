@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage>
             },
             child: AnimatedBuilder(
                 animation: _animationController,
-                builder: (context, snapshop) {
+                builder: (context, snapshot) {
                   final value = _animationController.value;
                   return Stack(
                     children: [
@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage>
           ),
           AnimatedBuilder(
             animation: _animationController,
-            builder: (context, snapshop) => Positioned(
+            builder: (context, snapshot) => Positioned(
               left: 0,
               right: 0,
               top: -182 * (1 - _animationController.value),
@@ -150,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage>
           ),
           AnimatedBuilder(
             animation: _animationController,
-            builder: (context, snapshop) => Positioned(
+            builder: (context, snapshot) => Positioned(
               left: 0,
               right: 0,
               bottom: -52 * (1 - _animationController.value),
